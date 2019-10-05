@@ -39,7 +39,12 @@ app.get('/', (req, res) => {
 // Require Notes routes
 require('./app/routes/note.routes')(app);
 
+let port = process.env.PORT;
+if (port == null || port === "") {
+  port = 8000;
+}
+
 // listen for requests
-app.listen(8080, () => {
+app.listen(port, () => {
   console.log("Server is listening on port 8080");
 });
