@@ -46,5 +46,5 @@ if (port == null || port === "") {
 
 // listen for requests
 app.listen(port, () => {
-  console.log("Server is listening on port 8080");
+  console.log("Server is listening on port ", port);
 });
